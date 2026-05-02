@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  oracle-db:
+    image: gvenzl/oracle-xe
+    container_name: telco-db
+    ports:
+      - "1521:1521"
+    environment:
+      - ORACLE_PASSWORD=135246
+    volumes:
+      - ./scripts:/container-entrypoint-initdb.d
+
+
+
+# Docker Compose configuration created for Oracle XE image with volume mapping and port exposure.
